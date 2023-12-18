@@ -41,12 +41,12 @@ unicodes = {'open cluster': u"\u16b8", 'globular cluster': u"\u2724",
             "planetary nebula": u"\u16bb", 'emission nebula, open cluster': u"\u25c8"}
 '''
 open cluster					Runic Letter Gar			ᚸ
-globular cluster					Heavy Four Balloon-Spoked Asterisk			✤
+globular cluster					Heavy Four Balloon-Spoked Asterisk		✤
 emission nebula					Runic Letter Stan			ᛥ
-star cloud					Helm Symbol			⎈
-spiral galaxy					Symbol for Samaritan Source			⅏
+star cloud					            Helm Symbol			            ⎈
+spiral galaxy					Symbol for Samaritan Source		⅏
 planetary nebula					Runic Letter Haegl H			ᚻ
-emission nebula, open cluster					White Diamond Containing Black Small Diamond			◈
+emission nebula, open cluster				White Diamond Containing Black Small Diamond	◈
 '''
 df['code'] = df['type'].replace(unicodes)
 df['name_2'] = df['proper_name'].fillna(df['name'])  # If proper name is not given, refer to name

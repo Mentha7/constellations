@@ -57,10 +57,10 @@ Morgan-Keenan designations (The MK system) uses O, B, A, F, G, K and M for desig
 def get_first_letter(name):
     '''Preprocess spectral designations.
     '''
-    if str(name)[0:2] == 'sd':
+    if str(name)[0:2] == 'sd':  # Remove luminosity class to look at spectral designation directly
         name = name[2::]
         get_first_letter(name)
-    if str(name)[0].isupper() and str(name)[0] != 'D':
+    if str(name)[0].isupper() and str(name)[0] != 'D':  # 'D' actually for white dwarfs, also part of luminosity class
         return name[0]
     else:
         # print(str(name)[0:2])  # For debugging
